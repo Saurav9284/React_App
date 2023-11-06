@@ -11,7 +11,7 @@ function Product() {
   const [loading , setLoading] = useState(null);
   const [current , setCurrent] = useState(1);
   const [limit , setLimit] = useState(4);
-  const [total , setTotal] = useState(8);
+  const [total , setTotal] = useState(0);
   const [filter , setFilter] = useState("");
   const [search, setSearch] = useState("");
   const [sort , setSort] = useState("");
@@ -42,6 +42,8 @@ function Product() {
        setLoading(false);
        const data = await res.json();
        setData(data);
+       const totalCount = res.headers.get('X-Total-Count');
+       setTotal(Math.ceil(totalCount/limit));
        console.log(data);
     }
     catch(error){

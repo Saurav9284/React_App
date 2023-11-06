@@ -6,6 +6,7 @@ function Sort({onChange}) {
       <h3>Sort by Price</h3>
       <button onClick={()=>onChange("asc")}>Asc</button>
       <button onClick={()=>onChange("desc")}>Desc</button>
+      <button onClick={()=>onChange("")}>Reset</button>
     </div>
   )
 }

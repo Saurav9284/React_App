@@ -8,6 +8,7 @@ function Filter({onChange}) {
       <button onClick={()=>onChange("lips")}>Lips</button>
       <button onClick={()=>onChange("Tools")}>Tools</button>
       <button onClick={()=>onChange("Eyes")}>Eyes</button>
+      <button onClick={()=>onChange("")}>Reset</button>
     </div>
   )
 }
